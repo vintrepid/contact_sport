@@ -1,0 +1,26 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;;;;
+FN:Wayne Enterprises
+ORG:Wayne Enterprises;
+EMAIL;type=INTERNET;type=WORK;type=pref:info@wayneenterprises.com
+X-ABShowAs:COMPANY
+CATEGORIES:Test
+X-ABUID:C9C08B97-1889-4D67-9595-C12482BF3B5F\:ABPerson
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+N:Wayne;Bruce;;;
+FN:Bruce Wayne
+ORG:Wayne Enterprises;
+EMAIL;type=INTERNET;type=WORK;type=pref:bruce@wayneenterprises.com
+TEL;type=WORK;type=pref:+44 20 7123 4567
+TEL;type=CELL:07777 999 888
+TEL;type=HOME;type=FAX:+44 20 71234 4560
+item1.ADR;type=WORK;type=pref:;;The Batcave;Gotham;NY;90210;USA
+item1.X-ABADR:gb
+item2.URL;type=pref:www.batman.com
+item2.X-ABLabel:_$!<HomePage>!$_
+CATEGORIES:Test
+X-ABUID:3852D6F6-6DDB-441C-8CE7-6594B0112C3D\:ABPerson
+END:VCARD
