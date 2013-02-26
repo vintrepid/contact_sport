@@ -55,7 +55,8 @@ module ContactSport
 
     def address_first_line(card)
       if card.address && card.address.street
-        card.address.street.split("\n").first
+        parts = card.address.street.split("\n")
+        parts.empty? ? EMPTY_FIELD : parts.first
       else
         EMPTY_FIELD
       end
@@ -63,7 +64,8 @@ module ContactSport
 
     def address_second_line(card)
       if card.address && card.address.street
-        card.address.street.split("\n")[1..-1].join "\n"
+        parts = card.address.street.split("\n")
+        parts.empty? ? EMPTY_FIELD : parts[1..-1].join("\n")
       else
         EMPTY_FIELD
       end
