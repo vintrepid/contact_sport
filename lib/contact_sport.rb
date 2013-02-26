@@ -4,14 +4,17 @@ require 'contact_sport/outlook_reader'
 
 module ContactSport
 
+  # Superclass for all ContactSport errors.
+  ContactSport::Error = Class.new RuntimeError
+
   # Raised when a contacts file doesn't appear to be Outlook CSV or vCard.
-  UnknownProviderError = Class.new RuntimeError
+  UnknownProviderError = Class.new ContactSport::Error
 
   # Raised when a contacts file cannot be parsed.
-  FormatError = Class.new RuntimeError
+  FormatError = Class.new ContactSport::Error
 
   # Raised when a contacts file is in an unknown encoding.
-  EncodingError = Class.new RuntimeError
+  EncodingError = Class.new ContactSport::Error
 
   EMPTY_FIELD = ''
   
