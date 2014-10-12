@@ -31,7 +31,10 @@ module ContactSport
             city:          address(:locality, card),
             region:        address(:region, card),
             postcode:      address(:postalcode, card),
-            country:       address(:country, card)
+            country:       address(:country, card),
+
+            birthday:      birthday(card),
+            note:          note(card)
           )
         end
       rescue Vcard::InvalidEncodingError, Vcard::UnsupportedError, Vcard::Unencodeable => e
@@ -40,6 +43,14 @@ module ContactSport
     end
 
     private
+
+    def note card
+      card.note || EMPTY_FIELD
+    end
+
+    def birthday(card)
+      card.birthday || EMPTY_FIELD
+    end
 
     def contents
       File.read file
